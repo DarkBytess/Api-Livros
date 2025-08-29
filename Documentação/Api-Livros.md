@@ -1,6 +1,6 @@
 # 📖 Documentação do Projeto Api-Livros
 
-Este documento descreve em detalhes a arquitetura, funcionalidades e endpoints da aplicação **Api-Livros**.
+Este documento descreve em detalhes a arquitetura, funcionalidades da aplicação **Api-Livros**.
 
 ---
 
