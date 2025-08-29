@@ -1,25 +1,56 @@
-# 📚 Api-Livros
+# 📖 Documentação do Projeto Api-Livros
 
-Uma aplicação de exemplo para gerenciamento de livraria, desenvolvida em Java utilizando Maven e Spring Boot.
+Este documento descreve em detalhes a arquitetura, funcionalidades e endpoints da aplicação **Api-Livros**.
 
-## 🚀 Tecnologias Utilizadas
+---
 
-- **Java**: Linguagem principal do projeto.
-- **Maven**: Gerenciamento de dependências e build.
-- **Spring Boot**: Framework para criação de aplicações Java.
-- **H2 Database**: Banco de dados em memória para testes (pode ser substituído por outro banco).
+## 📌 Visão Geral
 
-## 🛠️ Como Executar
+O **Api-Livros** é uma aplicação desenvolvida em **Java + Spring Boot**, com banco de dados **H2 em memória**, que disponibiliza uma API REST para gerenciamento de livros.  
 
-### Requisitos
+Funcionalidades principais:
+- Listar todos os livros cadastrados.
+- Buscar livros por ID.
+- Inicialização automática com **seeding** de dados (4 livros).
 
-- Java 8 ou superior.
-- Maven instalado ou utilizar o Maven Wrapper (`mvnw`).
+---
 
-### Passos
+## 🏗️ Arquitetura
 
-1. Clone o repositório:
+A aplicação segue a arquitetura em camadas do **Spring Boot**:
 
-   ```bash
-   git clone https://github.com/DarkBytess/bookstore.git
-   cd bookstore
+- **Entity** → Representa as tabelas do banco (classe `Book`).
+- **Repository** → Interface que acessa o banco de dados (`BookRepository`).
+- **Controller** → Define os endpoints da API (`BookController`).
+- **Application (ApiLivrosApplication.java)** → Classe principal que inicializa o projeto.
+
+Fluxo resumido:
+
+---
+
+## 📂 Estrutura de Diretórios
+Api-Livros/
+├── .gitignore
+├── .mvn/
+│ └── wrapper/
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src/
+└── main/
+└── java/
+└── com/
+└── apilivros/
+├── ApiLivrosApplication.java
+├── entity/
+│ └── Book.java
+├── repository/
+│ └── BookRepository.java
+└── controller/
+└── BookController.java
+
+- **`entity/`** → Contém as classes que representam as entidades do banco.
+- **`repository/`** → Interface para acessar os dados do banco.
+- **`controller/`** → Define os endpoints da API.
+- **`ApiLivrosApplication.java`** → Classe principal que sobe a aplicação.
+
